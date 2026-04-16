@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio | Fullstack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #020617;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #1e293b;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.skill span {
+    margin-top: 8px;
+    font-size: 0.8em;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.skill .small-text {
+    font-size: 0.65em; /* 👈 más pequeño */
+    line-height: 1.2;
+}
+
+section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="img/perfil.jpg" style="
+        width:120px;
+        height:120px;
+        border-radius:50%;
+        object-fit:cover;
+        margin-bottom:20px;
+        border:3px solid #38bdf8;
+    ">
+    
+    <h1>Desarrollador Fullstack</h1>
+    <p>Sistemas empresariales | APIs | Tiempo real</p>
+</header>
+
+<section>
+    <h2>Sobre mí</h2>
+    <p>
+        Soy desarrollador Fullstack con experiencia en la creación de plataformas empresariales robustas utilizando Laravel. 
+        Me especializo en el desarrollo de sistemas orientados a la gestión de datos, usuarios y automatización de procesos, 
+        construyendo soluciones escalables y enfocadas en rendimiento.
+    </p>
+
+    <p>
+        He trabajado en proyectos que integran APIs, funcionalidades en tiempo real mediante WebSockets 
+        y despliegues en entornos de producción. Me enfoco en escribir código limpio, estructurado 
+        y en crear aplicaciones que aporten valor real al negocio.
+    </p>
+</section>
+
+<section>
+    <h2>Proyectos</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <img src="img/crm.jpg">
+            <div class="card-content">
+                <h3>CRM Empresarial</h3>
+                <p>Sistema multiusuario con roles y permisos para gestión de clientes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/medico.jpg">
+            <div class="card-content">
+                <h3>Gestión de Citas Médicas</h3>
+                <p>Gestión de citas, doctores y pacientes con control de acceso.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/bingo.jpg">
+            <div class="card-content">
+                <h3>Bingo en Tiempo Real</h3>
+                <p>Plataforma con WebSockets y lógica de juego.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/carreras.jpg">
+            <div class="card-content">
+                <h3>Plataforma de Carreras Galgos</h3>
+                <p>Integración de APIs y procesamiento de datos en tiempo real.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('web')">
+
+            <div class="carousel" data-images='["img/web1.jpg","img/web2.jpg","img/web3.jpg","img/web4.jpg"]'>
+                <img src="img/web1.jpg" class="carousel-img">
+            </div>
+
+            <div class="card-content">
+                <h3>Desarrollo de Páginas Web</h3>
+                <p>Creación de sitios web personalizados con diferentes niveles de complejidad.</p>
+            </div>
+
+        </div>
+
+        <div class="card" onclick="openModal('bienestar')">
+            <img src="img/bienestar.jpg">
+            <div class="card-content">
+                <h3>Plataforma de Bienestar</h3>
+                <p>Sistema para gestión de terapias y servicios alternativos.</p>
+            </div>
+        </div>
+
+    </div>
+        </section>
+
+<section>
+    <h2>Habilidades</h2>
+    <div class="skills">
+
+        <div class="skill">
+            <i class="devicon-laravel-plain colored"></i>
+            <span>Laravel</span>
+        </div>
+
+        <div class="skill">
+            <i class="devicon-php-plain colored"></i>
+            <span>PHP</span>
+        </div>
+
+        <div class="skill">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+        </div>
+
+        <div class="skill">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>MySQL</span>
+        </div>
+
+        <div class="skill">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+        </div>
+
+        <div class="skill">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+        </div>
+
+        <!-- 🔥 WebSockets bien representado -->
+        <div class="skill">
+            <i class="devicon-laravel-plain colored"></i>
+            <span class="small-text">Laravel Echo (WebSockets)</span>
+        </div>
+
+    </div>
+</section>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Email: ferchocarrilloleon@hotmail.com</p>
+            <p>GitHub: <a href="#">Ver perfil</a></p>
+        </section>
+<script>
+document.querySelectorAll('.carousel').forEach(carousel => {
+    const images = JSON.parse(carousel.dataset.images);
+    const imgElement = carousel.querySelector('.carousel-img');
+
+    let index = 0;
+    let interval = null;
+
+    function changeImage() {
+        index = (index + 1) % images.length;
+
+        imgElement.style.opacity = 0;
+
+        setTimeout(() => {
+            imgElement.src = images[index];
+            imgElement.style.opacity = 1;
+        }, 300);
+    }
+
+    // 🔹 inicia automáticamente
+    interval = setInterval(changeImage, 2500);
+
+    // 🔹 pausa al pasar el mouse
+    carousel.addEventListener("mouseenter", () => {
+        clearInterval(interval);
+    });
+
+    // 🔹 reanuda al salir
+    carousel.addEventListener("mouseleave", () => {
+        interval = setInterval(changeImage, 2500);
+    });
+});
+</script>
+</body>
+</html>
