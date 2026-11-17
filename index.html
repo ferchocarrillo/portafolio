@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio | Fullstack Developer</title>
+<title>Portafolio | Fernando Carrillo - Fullstack Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -23,6 +23,23 @@ header {
 
 h1 {
     font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.btn-cv {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #020617;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-cv:hover {
+    background: #7dd3fc;
+    transform: translateY(-2px);
 }
 
 section {
@@ -58,14 +75,6 @@ section {
     padding: 20px;
 }
 
-.skills span {
-    display: inline-block;
-    background: #1e293b;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 6px;
-}
-
 a {
     color: #38bdf8;
     text-decoration: none;
@@ -77,9 +86,8 @@ a {
 
 .carousel img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 10px;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -95,7 +103,11 @@ a {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: 100px;
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: 0.3s;
 }
 
@@ -105,17 +117,17 @@ a {
 
 .skill i {
     font-size: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
+
 .skill span {
-    margin-top: 8px;
-    font-size: 0.8em;
+    font-size: 0.85em;
     color: #94a3b8;
     text-align: center;
 }
 
 .skill .small-text {
-    font-size: 0.65em; /* 👈 más pequeño */
+    font-size: 0.7em;
     line-height: 1.2;
 }
 
@@ -129,7 +141,7 @@ section p {
 <body>
 
 <header>
-    <img src="img/perfil.jpg" style="
+    <img src="img/perfil.jpg" alt="Fernando Carrillo" style="
         width:120px;
         height:120px;
         border-radius:50%;
@@ -138,20 +150,25 @@ section p {
         border:3px solid #38bdf8;
     ">
     
-    <h1>Desarrollador Fullstack</h1>
-    <p>Sistemas empresariales | APIs | Tiempo real</p>
+    <h1>Fernando Carrillo León</h1>
+    <p>Desarrollador Fullstack & Móvil | Sistemas Empresariales | APIs | Tiempo Real</p>
+    
+    <!-- Botón de descarga directo a tu CV 2026 -->
+    <a href="img/CV_Fernando_Carrillo_2026.pdf" target="_blank" class="btn-cv">
+        Descargar Hoja de Vida (2026)
+    </a>
 </header>
 
 <section>
     <h2>Sobre mí</h2>
     <p>
-        Soy desarrollador Fullstack con experiencia en la creación de plataformas empresariales robustas utilizando Laravel. 
-        Me especializo en el desarrollo de sistemas orientados a la gestión de datos, usuarios y automatización de procesos, 
-        construyendo soluciones escalables y enfocadas en rendimiento.
+        Soy desarrollador Fullstack con amplia experiencia en la creación de plataformas empresariales robustas utilizando Laravel, 
+        aplicaciones móviles multiplataforma con Flutter y entornos interactivos con Unity. Me especializo en el desarrollo de sistemas 
+        orientados a la gestión de datos, usuarios y automatización de procesos, construyendo soluciones escalables y enfocadas en rendimiento.
     </p>
 
     <p>
-        He trabajado en proyectos que integran APIs, funcionalidades en tiempo real mediante WebSockets 
+        He liderado y ejecutado proyectos que integran APIs REST, funcionalidades en tiempo real mediante WebSockets 
         y despliegues en entornos de producción. Me enfoco en escribir código limpio, estructurado 
         y en crear aplicaciones que aporten valor real al negocio.
     </p>
@@ -163,59 +180,66 @@ section p {
     <div class="projects">
 
         <div class="card">
-            <img src="img/crm.jpg">
+            <img src="img/web5.jpg" alt="Gestión Vehicular Grancargo">
+            <div class="card-content">
+                <h3>Plataforma de Gestión Vehicular</h3>
+                <p>Sistema integral de programación, envío, recepción de flota, gestión documental y tableros gerenciales.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/crm.jpg" alt="CRM Empresarial">
             <div class="card-content">
                 <h3>CRM Empresarial</h3>
-                <p>Sistema multiusuario con roles y permisos para gestión de clientes.</p>
+                <p>Sistema multiusuario con roles y permisos para gestión de clientes y automatización operativa.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="img/medico.jpg">
+            <img src="img/medico.jpg" alt="Gestión de Citas Médicas">
             <div class="card-content">
                 <h3>Gestión de Citas Médicas</h3>
-                <p>Gestión de citas, doctores y pacientes con control de acceso.</p>
+                <p>Gestión de citas, doctores y pacientes con control de acceso y seguimiento clínico.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="img/bingo.jpg">
+            <img src="img/bingo.jpg" alt="Bingo en Tiempo Real">
             <div class="card-content">
                 <h3>Bingo en Tiempo Real</h3>
-                <p>Plataforma con WebSockets y lógica de juego.</p>
+                <p>Plataforma multijugador con WebSockets y lógica de sorteo automatizada en vivo.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="img/carreras.jpg">
+            <img src="img/carreras.jpg" alt="Plataforma de Carreras">
             <div class="card-content">
-                <h3>Plataforma de Carreras Galgos</h3>
-                <p>Integración de APIs y procesamiento de datos en tiempo real.</p>
+                <h3>Plataforma de Carreras</h3>
+                <p>Integración de APIs, sincronización de video y procesamiento de datos en tiempo real.</p>
             </div>
         </div>
-        <div class="card" onclick="openModal('web')">
 
-            <div class="carousel" data-images='["img/web1.jpg","img/web2.jpg","img/web3.jpg","img/web4.jpg"]'>
-                <img src="img/web1.jpg" class="carousel-img">
+        <div class="card" onclick="openModal('web')">
+            <div class="carousel" data-images='["img/web1.jpg","img/web2.jpg","img/web3.jpg","img/web4.jpg","img/web5.jpg","img/web6.jpg","img/web7.jpg"]'>
+                <img src="img/web1.jpg" class="carousel-img" alt="Desarrollo Web">
             </div>
 
             <div class="card-content">
                 <h3>Desarrollo de Páginas Web</h3>
-                <p>Creación de sitios web personalizados con diferentes niveles de complejidad.</p>
+                <p>Creación de sitios web corporativos, portales comunitarios y plataformas a medida.</p>
             </div>
-
         </div>
 
         <div class="card" onclick="openModal('bienestar')">
-            <img src="img/bienestar.jpg">
+            <img src="img/bienestar.jpg" alt="Plataforma de Bienestar">
             <div class="card-content">
                 <h3>Plataforma de Bienestar</h3>
-                <p>Sistema para gestión de terapias y servicios alternativos.</p>
+                <p>Sistema para diagnóstico y gestión de terapias y servicios alternativos integrales.</p>
             </div>
         </div>
 
     </div>
-        </section>
+</section>
 
 <section>
     <h2>Habilidades</h2>
@@ -237,21 +261,30 @@ section p {
         </div>
 
         <div class="skill">
+            <i class="devicon-flutter-plain colored"></i>
+            <span>Flutter</span>
+        </div>
+
+        <div class="skill">
+            <i class="devicon-unity-plain"></i>
+            <span>Unity (C#)</span>
+        </div>
+
+        <div class="skill">
             <i class="devicon-mysql-plain colored"></i>
             <span>MySQL</span>
         </div>
 
         <div class="skill">
             <i class="devicon-html5-plain colored"></i>
-            <span>HTML</span>
+            <span>HTML5</span>
         </div>
 
         <div class="skill">
             <i class="devicon-css3-plain colored"></i>
-            <span>CSS</span>
+            <span>CSS3</span>
         </div>
 
-        <!-- 🔥 WebSockets bien representado -->
         <div class="skill">
             <i class="devicon-laravel-plain colored"></i>
             <span class="small-text">Laravel Echo (WebSockets)</span>
@@ -260,13 +293,14 @@ section p {
     </div>
 </section>
 
-        <section>
-            <h2>Contacto</h2>
-            <p>Email: ferchocarrilloleon@hotmail.com</p>
-            <p>WhatsApp:  +57 311 281 98 11</p>
-            <p>LinkedIn:   <a href="https://www.linkedin.com/in/fernando-carrillo-b84245191" target="_blank">Visitar perfil</a></p>
-            <p>GitHub: <a href="#">Ver perfil</a></p>
-        </section>
+<section>
+    <h2>Contacto</h2>
+    <p>Email: ferchocarrilloleon@hotmail.com</p>
+    <p>WhatsApp: +57 311 281 98 11</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/fernando-carrillo-b84245191" target="_blank">Visitar perfil</a></p>
+    <p>GitHub: <a href="https://github.com/ferchocarrillo" target="_blank">github.com/ferchocarrillo</a></p>
+</section>
+
 <script>
 document.querySelectorAll('.carousel').forEach(carousel => {
     const images = JSON.parse(carousel.dataset.images);
@@ -277,7 +311,6 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 
     function changeImage() {
         index = (index + 1) % images.length;
-
         imgElement.style.opacity = 0;
 
         setTimeout(() => {
@@ -286,15 +319,12 @@ document.querySelectorAll('.carousel').forEach(carousel => {
         }, 300);
     }
 
-    // 🔹 inicia automáticamente
     interval = setInterval(changeImage, 2500);
 
-    // 🔹 pausa al pasar el mouse
     carousel.addEventListener("mouseenter", () => {
         clearInterval(interval);
     });
 
-    // 🔹 reanuda al salir
     carousel.addEventListener("mouseleave", () => {
         interval = setInterval(changeImage, 2500);
     });
